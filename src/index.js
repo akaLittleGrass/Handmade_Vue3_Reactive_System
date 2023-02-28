@@ -13,5 +13,9 @@ effect(() =>{
     console.log(JSON.stringify(state.list))
 })
 
+effect(() => {
+    state.count = state.count++
+})
+
 state.count++
-// state.list.push('a')
+state.list.push('a')
