@@ -59,7 +59,7 @@ export function trigger(target, type, key, value, oldValue) {
     if (key !== null) {
         run(depsMap.get(key))
     }
-    if (type === 'add') {//数组新增属性会出触发length对应的依赖，取值的时候会对length属性进行依赖收集
+    if (type === 'add') {//数组新增属性会触发length对应的依赖，取值的时候会对length属性进行依赖收集
         run(depsMap.get(Array.isArray(target) ? 'length' : ''))
     }
 }
