@@ -9,7 +9,7 @@ export function effect(fn, options = {}) {
 let uid = 0, activeEffect
 const effectStack = []
 function createReactiveEffect(fn, options) {
-    const effect = function createReactiveEffect() {
+    const effect = function () {
         if (!effectStack.includes(effect)) {
             try {
                 effectStack.push(effect)
